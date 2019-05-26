@@ -20,7 +20,7 @@ filetypes = [
     ("All files", "*"),
 ]
 
-basecolor = "SystemButtonface"
+basecolor = "#f0f0f0"
 bordercolor = "#ACA5F0"
 
 class WordProcessor(tk.Frame):
