@@ -12,8 +12,6 @@ install:
   - pip install nose
   - pip install Pillow
 script:
-  - py.test --cov=pytest_fixture_tools --cov-report=term-missing tests
-  - python tests/
-  - nosetests --with-coverage 
+  - pytest tests
 after_success:
   - coveralls
