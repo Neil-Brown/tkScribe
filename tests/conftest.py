@@ -3,7 +3,7 @@ import tkinter as tk
 
 from tkScribe.py_wordprocessor import WordProcessor
 
-path = "..//"
+path = "..//..//"
 
 @pytest.fixture(scope="session")
 def scribe_class(request):
