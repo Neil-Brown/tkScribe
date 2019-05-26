@@ -30,6 +30,7 @@ class WordProcessor(tk.Frame):
         tk.Frame.__init__(self)
         self.parent = parent
         self.path = path
+        print("path", path)
         try:
             self.parent.iconbitmap("{}images//logo.ico".format(path))
         except: # Parent is not top level
@@ -539,8 +540,8 @@ class WordProcessor(tk.Frame):
                 c1 = bordercolor
                 c2 = basecolor
             else:
-                c1 = "SystemButtonFace"
-                c2 = "SystemButtonFace"
+                c1 = "basecolor"
+                c2 = "basecolor"
             self.font_buttons[p]["button"].configure(background=c1)
             self.font_buttons[p]["button"].label.configure(
                 background=c2)
@@ -1033,10 +1034,10 @@ class WordProcessor(tk.Frame):
         self.text_editor.focus_force()
 
     def reset_font_buttons(self):
-        """ Set all font button's color to SystemButtonFace"""
+        """ Set all font button's color to basecolor"""
         for item in self.font_buttons.items():
-            item[1]["button"].label.configure(background="SystemButtonFace")
-            item[1]["button"].configure(background="SystemButtonFace")
+            item[1]["button"].label.configure(background="basecolor")
+            item[1]["button"].configure(background="basecolor")
 
     def render_doc(self):
         """Sets document title. Inserts text and calls methods to apply run
@@ -1191,8 +1192,8 @@ class WordProcessor(tk.Frame):
             d[key]["button"] = Button(win,
                                       image=d[key]["image"],
                                       command=d[key]["method"],
-                                      inactive_background="SystemButtonFace",
-                                      inactive_border="SystemButtonFace",
+                                      inactive_background="basecolor",
+                                      inactive_border="basecolor",
                                       active_background=basecolor,
                                       active_border=bordercolor,
                                       borderwidth=2,
