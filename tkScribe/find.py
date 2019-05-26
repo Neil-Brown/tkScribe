@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 from tkinter import ttk, messagebox
 
@@ -12,7 +13,10 @@ class Find(tk.Toplevel):
         self.editor = editor
         self.path = path
         self.title("Find")
-        self.iconbitmap("{}images//logo.ico".format(self.path))
+        if "nt" == os.name:
+            self.iconbitmap("{}images//logo.ico".format(self.path))
+        else:
+            self.iconbitmap("{}images//logo.xbm".format(self.path))
         tk.Label(self, text="Find what:").grid(column=0, row=0, sticky="W",
                                                padx=(5, 0), pady=(5, 0))
         self.countVar = tk.StringVar()
