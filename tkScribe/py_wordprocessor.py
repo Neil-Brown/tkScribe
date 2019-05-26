@@ -42,7 +42,7 @@ class WordProcessor(tk.Frame):
         self.minimized = False
         self.minwidth = 0
         self.preferences = {
-            'dir': "C:\\Users\\{}\\Documents\\".format(os.getlogin()),
+            'dir': "C://Users//{}//Documents//".format(os.getlogin()),
             'font': dict(family="Arial", size=12, weight="normal",
                          slant="roman", underline=False, overstrike=False),
             'foreground': "black",
@@ -287,7 +287,7 @@ class WordProcessor(tk.Frame):
             inactive_border=basecolor,
             active_border=bordercolor,
             active_background=basecolor,
-            image=ImageTk.PhotoImage(Image.open("{}images\\x.png".format(
+            image=ImageTk.PhotoImage(Image.open("{}images//x.png".format(
                 self.path))),
             command=self.restore_mins)
 
