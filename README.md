@@ -1,4 +1,4 @@
-![image](https://github.com/Neil-Brown/pyscribe/blob/master/images/logo_small.png)<br/><br/>
+![image](https://github.com/Neil-Brown/tkScribe/blob/master/images/logo_small.png)<br/><br/>
 Standalone or plugin wordprocessor for Tkinter applications.<br/>
 * Fonts
 * Bold 
