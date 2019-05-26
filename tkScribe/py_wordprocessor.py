@@ -514,7 +514,7 @@ class WordProcessor(tk.Frame):
         self.text_editor.pack(fill="y", expand=True)
         self.char_num_label.pack()
         self.text_editor.tag_configure("highlight", background=basecolor)
-        self.text_editor.tag_configure("sel", selectbackground="white")
+        self.text_editor.tag_configure("sel", background="white")
 
         # Bind movement buttons to track which paragraph / run the cursor us at
         for x in ["Button-1", "Left", "Right", "Up", "Down"]:
