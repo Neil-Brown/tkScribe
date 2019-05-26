@@ -9,9 +9,9 @@ before_install:
 install:
   - pip install python-coveralls
   - pip install coverage
-  - pip install nose
   - pip install Pillow
 script:
   - py.test -v --cov-config .coveragerc --cov=mymodule mymodule/tests
+  - pytest tests/ -v -m "not creates_dialogue"
 after_success:
   - coveralls
