@@ -7,6 +7,7 @@ from unittest.mock import MagicMock
 from tkScribe.py_wordprocessor import basecolor, bordercolor
 
 foreground = "#082947"
+basecolor = "#f0f0f0"
 path="..//"
 
 @pytest.fixture(scope="module", autouse=True)
@@ -195,7 +196,7 @@ class TestPositionChangeRun(TestCase):
         wp.text_editor.mark_set("insert", "1.4")
         wp.check_pos()
         self.assertEqual(wp.font_buttons["weight"]["button"].cget(
-                         "background"), "SystemButtonFace")
+                         "background"), basecolor)
 
     def test_check_buttons_without_format(self):
         for b in ["slant", "underline", "overstrike"]:
@@ -203,9 +204,9 @@ class TestPositionChangeRun(TestCase):
             wp.check_pos()
             wp.set_format_buttons()
             self.assertEqual(wp.font_buttons[b]["button"].cget(
-                             "background"), "SystemButtonFace")
+                             "background"), basecolor)
             self.assertEqual(wp.font_buttons[b]["button"].label.cget(
-                "background"), "SystemButtonFace")
+                "background"), basecolor)
 
     def test_check_buttons_with_format(self):
         wp.text_editor.mark_set("insert", "1.14")
@@ -221,9 +222,9 @@ class TestPositionChangeRun(TestCase):
         wp.check_pos()
         wp.set_format_buttons()
         self.assertEqual(wp.font_buttons["weight"]["button"].cget(
-            "background"), "SystemButtonFace")
+            "background"), basecolor)
         self.assertEqual(wp.font_buttons["weight"]["button"].label.cget(
-            "background"), "SystemButtonFace")
+            "background"), basecolor)
 
 
 class TestWordProcessor(TestCase):
@@ -350,9 +351,9 @@ class TestWordProcessor(TestCase):
         wp.new()
         for button in buttons:
             self.assertEqual(wp.font_buttons[button]["button"].label.cget(
-                "background"), "SystemButtonFace")
+                "background"), basecolor)
             self.assertEqual(wp.font_buttons[button]["button"].cget(
-                "background"), "SystemButtonFace")
+                "background"), basecolor)
 
     def test_format_button_reset(self):
         wp.new()
