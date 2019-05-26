@@ -282,10 +282,10 @@ class WordProcessor(tk.Frame):
         # Sub Frames
         self.delete_label = Button(
             self.frame,
-            inactive_background="SystemButtonFace",
-            inactive_border="SystemButtonFace",
+            inactive_background="basecolor",
+            inactive_border="basecolor",
             active_border=bordercolor,
-            active_background="SystemButtonFace",
+            active_background="basecolor",
             image=ImageTk.PhotoImage(Image.open("{}images\\x.png".format(
                 self.path))),
             command=self.restore_mins)
