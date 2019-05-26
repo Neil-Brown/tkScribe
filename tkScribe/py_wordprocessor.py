@@ -283,10 +283,10 @@ class WordProcessor(tk.Frame):
         # Sub Frames
         self.delete_label = Button(
             self.frame,
-            inactive_background="basecolor",
-            inactive_border="basecolor",
+            inactive_background=basecolor,
+            inactive_border=basecolor,
             active_border=bordercolor,
-            active_background="basecolor",
+            active_background=basecolor,
             image=ImageTk.PhotoImage(Image.open("{}images\\x.png".format(
                 self.path))),
             command=self.restore_mins)
@@ -540,8 +540,8 @@ class WordProcessor(tk.Frame):
                 c1 = bordercolor
                 c2 = basecolor
             else:
-                c1 = "basecolor"
-                c2 = "basecolor"
+                c1 = basecolor
+                c2 = basecolor
             self.font_buttons[p]["button"].configure(background=c1)
             self.font_buttons[p]["button"].label.configure(
                 background=c2)
@@ -1036,8 +1036,8 @@ class WordProcessor(tk.Frame):
     def reset_font_buttons(self):
         """ Set all font button's color to basecolor"""
         for item in self.font_buttons.items():
-            item[1]["button"].label.configure(background="basecolor")
-            item[1]["button"].configure(background="basecolor")
+            item[1]["button"].label.configure(background=basecolor)
+            item[1]["button"].configure(background=basecolor)
 
     def render_doc(self):
         """Sets document title. Inserts text and calls methods to apply run
@@ -1192,8 +1192,8 @@ class WordProcessor(tk.Frame):
             d[key]["button"] = Button(win,
                                       image=d[key]["image"],
                                       command=d[key]["method"],
-                                      inactive_background="basecolor",
-                                      inactive_border="basecolor",
+                                      inactive_background=basecolor,
+                                      inactive_border=basecolor,
                                       active_background=basecolor,
                                       active_border=bordercolor,
                                       borderwidth=2,
