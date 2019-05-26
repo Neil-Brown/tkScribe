@@ -32,7 +32,7 @@ class WordProcessor(tk.Frame):
         self.path = path
         try:
             self.parent.iconbitmap("{}images//logo.ico".format(path))
-        except AttributeError: # Parent is not top level
+        except: # Parent is not top level
             pass
         self.configure_kwargs(kwargs)
         self.title_txt = "Untitled"
