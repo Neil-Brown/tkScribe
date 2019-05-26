@@ -10,7 +10,7 @@ install:
   - pip install python-coveralls
   - pip install coverage
   - pip install nose
-  - pip install pillow
+  - pip install Pillow
 script:
   - python tests -p no:dependency
   - nosetests --with-coverage 
