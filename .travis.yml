@@ -11,7 +11,6 @@ install:
   - pip install coverage
   - pip install Pillow
 script:
-  - py.test -v --cov-config .coveragerc --cov=mymodule mymodule/tests
-  - pytest tests/ -v -m "not creates_dialogue"
+  - pytest tests/ 
 after_success:
   - coveralls
