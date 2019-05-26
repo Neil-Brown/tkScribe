@@ -2,6 +2,7 @@ import pytest
 from unittest import TestCase
 
 wp = None
+path="..//"
 
 @pytest.fixture(scope="module", autouse=True)
 def setup(scribe_class):
@@ -13,8 +14,8 @@ class TestFind(TestCase):
 
     def setUp(self):
         wp.new()
-        self.fd =  wp.find()
-        self.rd = wp.replace()
+        self.fd =  wp.find(path=path)
+        self.rd = wp.replace(path=path)
         wp.text_editor.insert("1.0", "Some more more more")
         self.fd.inc = "1.0"
         self.fd.start = "1.0"
