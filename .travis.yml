@@ -11,6 +11,6 @@ install:
   - pip install coverage
   - pip install Pillow
 script:
-  - pytest tests/ 
+  - pytest tests/test_find/py 
 after_success:
   - coveralls
