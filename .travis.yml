@@ -12,7 +12,7 @@ install:
   - pip install nose
   - pip install Pillow
 script:
-  - python tests -p no:dependency
+  - python tests/
   - nosetests --with-coverage 
 after_success:
   - coveralls
