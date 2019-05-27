@@ -1,6 +1,7 @@
 import copy
 import os
 import pytest
+import unittest
 from unittest import TestCase
 from unittest.mock import MagicMock
 
@@ -373,7 +374,7 @@ class TestWordProcessor(TestCase):
         wp.ext_handling()
         self.assertEqual(wp.document.path, "test.scribe")
 
-    @pytest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true", "Skipping this test on Travis CI.")
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true", "Skipping this test on Travis CI.")
     def test_get_paragraph_no_text(self):
         wp.new()
         p = wp.get_paragraphs()
