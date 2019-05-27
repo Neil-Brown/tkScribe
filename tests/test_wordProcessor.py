@@ -125,11 +125,6 @@ class Dropdowns(TestCase):
             wp.update_idletasks()
             self.assertTrue(dp.winfo_ismapped())
 
-    def test_scroll(self):
-        idx = wp.font_dropdown.tag_ranges(self.fonts[-2].replace(" ", ""))[0]
-        wp.scroll(wp.font_dropdown, self.fonts[-2])
-        self.assertIsNotNone(wp.font_dropdown.bbox(idx))
-
     def test_highlight(self):
         tag = self.fonts[10].replace(" ", "")
         wp.highlight(wp.font_dropdown, tag)
@@ -378,6 +373,7 @@ class TestWordProcessor(TestCase):
         wp.ext_handling()
         self.assertEqual(wp.document.path, "test.scribe")
 
+    @pytest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true", "Skipping this test on Travis CI.")
     def test_get_paragraph_no_text(self):
         wp.new()
         p = wp.get_paragraphs()
