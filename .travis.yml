@@ -9,8 +9,9 @@ before_install:
 install:
   - pip install python-coveralls
   - pip install coverage
+  - pip install pytest-cov
   - pip install Pillow
 script:
-  - pytest -k "not creates_dialogue" tests/
+  - pytest -k "not creates_dialogue"--cov= tests/
 after_success:
   - coveralls
