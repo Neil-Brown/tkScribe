@@ -13,6 +13,6 @@ install:
   - pip install Pillow
 script:
   - pytest -k "not creates_dialogue"
-  - nosetests --with-coverage 
+  - pytest --cov
 after_success:
   - coveralls
