@@ -6,17 +6,13 @@ DEBUG = True
 
 class Find(tk.Toplevel):
 
-    def __init__(self, editor, path=""):
+    def __init__(self, editor, logo=None):
         tk.Toplevel.__init__(self)
         """Initiaize a Toplevel window as a Find dialogue and as the basis 
         of the Replace dialog"""
         self.editor = editor
-        self.path = path
         self.title("Find")
-        if "nt" == os.name:
-            self.iconbitmap("{}images//logo.ico".format(self.path))
-        else:
-            self.iconbitmap("@{}images//logo.xbm".format(self.path))
+        self.tk.call('wm', 'iconphoto', self._w, logo)
         tk.Label(self, text="Find what:").grid(column=0, row=0, sticky="W",
                                                padx=(5, 0), pady=(5, 0))
         self.countVar = tk.StringVar()
@@ -98,9 +94,9 @@ class Find(tk.Toplevel):
 
 
 class Replace(Find):
-    def __init__(self, editor, path=""):
+    def __init__(self, editor, logo=None):
         """Inherits from Find class to construct a Toplevel Replace dialog"""
-        super(Replace, self).__init__(editor, path)
+        super(Replace, self).__init__(editor, logo)
         self.title("Replace")
         tk.Label(self, text="Replace with:").grid(column=0, row=1, sticky="W")
         self.replace_button = ttk.Button(self, text="Replace",
