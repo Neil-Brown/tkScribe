@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Neil-Brown/tkScribe.svg?branch=master)](https://travis-ci.org/Neil-Brown/tkScribe)<br/><br/>
 ![image](https://github.com/Neil-Brown/tkScribe/blob/master/images/logo_small.png)<br/><br/>
 Standalone or plugin wordprocessor for Tkinter applications.<br/>
 * Fonts
