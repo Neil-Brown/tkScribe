@@ -12,6 +12,6 @@ install:
   - pip install pytest-cov
   - pip install Pillow
 script:
-  - pytest -k "not creates_dialogue" tests/
+  - py.test coveralls/tests -k "not creates_dialogue"
 after_success:
   - coveralls
