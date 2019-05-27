@@ -13,5 +13,6 @@ install:
   - pip install Pillow
 script:
   - py.test coveralls/tests -k "not creates_dialogue"
+  - nosetests --with-coverage 
 after_success:
   - coveralls
