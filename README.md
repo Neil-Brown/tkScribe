@@ -1,5 +1,5 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/04b15102ed9d4063ae6a34ea5498ac38)](https://app.codacy.com/app/neilbrownemail/tkScribe?utm_source=github.com&utm_medium=referral&utm_content=Neil-Brown/tkScribe&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.org/Neil-Brown/tkScribe.svg?branch=master)](https://travis-ci.org/Neil-Brown/tkScribe)<br/><br/>
+[![Build Status](https://travis-ci.org/Neil-Brown/tkScribe.svg?branch=master)](https://travis-ci.org/Neil-Brown/tkScribe)[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)<br/><br/>
 ![image](https://github.com/Neil-Brown/tkScribe/blob/master/images/logo_small.png)<br/><br/>
 Standalone or plugin wordprocessor for Tkinter applications.<br/>
 * Fonts
