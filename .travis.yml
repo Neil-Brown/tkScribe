@@ -13,5 +13,6 @@ install:
   - pip install nose
 script:
   - pytest -k "not creates_dialogue" tests/
+  - nosetests --with-coverage 
 after_success:
   - coveralls
