@@ -11,6 +11,6 @@ install:
   - pip install coverage
   - pip install Pillow
 script:
-  - pytest tests/
+  - pytest -k "not creates_dialogue" tests/
 after_success:
   - coveralls
