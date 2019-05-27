@@ -1017,6 +1017,7 @@ class TestGetParagraph(TestCase):
                          "center\nright\nleft")
         self.assertIn("p3", wp.text_editor.tag_names())
 
+    @unittest.skipIf("TRAVIS" in os.environ and os.environ["TRAVIS"] == "true", "Skipping this test on Travis CI.")
     def test_get_paragraphs(self):
         self.assertEqual(wp.get_paragraphs(), {'p1': {'index': ('1.6', '2.0'),
                                                       'justify': 'center',
