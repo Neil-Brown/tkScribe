@@ -30,11 +30,9 @@ class WordProcessor(tk.Frame):
         tk.Frame.__init__(self)
         self.parent = parent
         self.path = path
-        print("path", path)
-        try:
-            self.parent.iconbitmap("{}images//logo.ico".format(path))
-        except: # Parent is not top level
-            pass
+        self.logo = tk.Image("photo", file="{}images//logo.gif".format(path))
+        # root.iconphoto(True, img) # you may also want to try this.
+        self.parent.tk.call('wm', 'iconphoto', self.parent._w, self.logo)
         self.configure_kwargs(kwargs)
         self.title_txt = "Untitled"
         self.minimized_frames = []
@@ -1177,10 +1175,10 @@ class WordProcessor(tk.Frame):
 
     # Edit commands
     def find(self):
-        return Find(self.text_editor, path=self.path)
+        return Find(self.text_editor, logo=self.logo)
 
     def replace(self):
-        return Replace(self.text_editor, path=self.path)
+        return Replace(self.text_editor, logo=self.logo)
 
     def button_packer(self, win, d, stay_active=False):
         """Receives a window and a dictionary containing packing information
