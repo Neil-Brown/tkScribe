@@ -20,6 +20,7 @@ All formatting can be saved and reloaded.
 
 ## Installation
 
+Available soon on pypi 27/05/2019
 ```pip install tkScribe```
 
 ## Documentation
