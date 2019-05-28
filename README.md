@@ -18,7 +18,7 @@ All formatting can be saved and reloaded.
 ## Requirements
 
 * Windows, Mac, Linux
-* Python 3.x with tkinter and Pillow
+* Python 3.x with tkinter
 
 ## Installation
 
@@ -134,7 +134,7 @@ When reporting issues, please include code that replicates the issue,
 * What did you do?
 * What did you expect to happen?
 * What actually happened?
-* What versions of Pillow and Python are you using?
+* What versions Python are you using?
 
 
 
